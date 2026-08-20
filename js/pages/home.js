@@ -20,3 +20,5 @@ if (document.readyState === 'loading') {
 } else {
   renderHome();
 }
+
+window.addEventListener('langchange', renderHome);

@@ -32,3 +32,5 @@ if (document.readyState === 'loading') {
 } else {
   renderLearning();
 }
+
+window.addEventListener('langchange', renderLearning);

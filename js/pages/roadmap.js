@@ -76,3 +76,5 @@ if (document.readyState === 'loading') {
 } else {
   renderRoadmap();
 }
+
+window.addEventListener('langchange', renderRoadmap);

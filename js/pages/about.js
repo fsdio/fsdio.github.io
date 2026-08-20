@@ -18,3 +18,5 @@ if (document.readyState === 'loading') {
 } else {
   renderAboutPage();
 }
+
+window.addEventListener('langchange', renderAboutPage);

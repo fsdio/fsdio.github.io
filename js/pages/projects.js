@@ -24,3 +24,5 @@ if (document.readyState === 'loading') {
 } else {
   renderProjects();
 }
+
+window.addEventListener('langchange', renderProjects);
