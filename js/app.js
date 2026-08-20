@@ -81,40 +81,12 @@ function bindNavEvents() {
 }
 
 function bindLangSwitcher() {
-  const trigger = document.querySelector('.lang-switcher__trigger');
-  const menu = document.querySelector('.lang-switcher__menu');
-  const options = document.querySelectorAll('.lang-switcher__option');
-  
-  if (!trigger || !menu) return;
-  
-  trigger.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const expanded = trigger.getAttribute('aria-expanded') === 'true';
-    trigger.setAttribute('aria-expanded', !expanded);
-    menu.hidden = expanded;
-  });
-  
-  options.forEach(opt => {
-    opt.addEventListener('click', () => {
-      const lang = opt.dataset.lang;
-      switchLanguage(lang);
-      menu.hidden = true;
-      trigger.setAttribute('aria-expanded', 'false');
+  const radios = document.querySelectorAll('.lang-switcher input[name="lang"]');
+  if (!radios.length) return;
+  radios.forEach(r => {
+    r.addEventListener('change', () => {
+      if (r.checked) switchLanguage(r.value);
     });
-  });
-  
-  document.addEventListener('click', (e) => {
-    if (!trigger.contains(e.target) && !menu.contains(e.target)) {
-      menu.hidden = true;
-      trigger.setAttribute('aria-expanded', 'false');
-    }
-  });
-  
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      menu.hidden = true;
-      trigger.setAttribute('aria-expanded', 'false');
-    }
   });
 }
 
@@ -122,26 +94,11 @@ function switchLanguage(lang) {
   setLang(lang);
   localStorage.setItem(STORAGE_KEY, lang);
   document.documentElement.lang = lang === 'id' ? 'id' : 'en';
-  
+
   renderHeader();
   updatePageTexts();
-  
-  // Force update language switcher display
-  const trigger = document.querySelector('.lang-switcher__trigger');
-  const currentLangDisplay = document.querySelector('.lang-switcher__current');
-  const options = document.querySelectorAll('.lang-switcher__option');
-  
-  if (currentLangDisplay) {
-    currentLangDisplay.textContent = t(`lang.${lang}`);
-  }
-  
-  if (options.length >= 2) {
-    options[0].classList.toggle('lang-switcher__option--active', lang === 'en');
-    options[1].classList.toggle('lang-switcher__option--active', lang === 'id');
-  }
-  
-  const event = new CustomEvent('langchange', { detail: { lang } });
-  window.dispatchEvent(event);
+
+  window.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
 }
 
 function initScrollReveal() {
