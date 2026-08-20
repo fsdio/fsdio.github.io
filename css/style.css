@@ -1410,16 +1410,21 @@ ul {
   transition: color 0.2s;
 }
 
-.nav__link:hover {
-  color: var(--color-primary);
+.header .nav {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
 }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 96px var(--space-lg) var(--space-xl);
+.section, 
+.roadmap-container, 
+.hero--page {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
 }
 
 .hero__picture {
@@ -1489,13 +1494,11 @@ ul {
   padding: var(--space-xl) var(--space-lg);
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: var(--space-sm) var(--space-lg);
+.section__title {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--space-md);
+  color: var(--color-primary);
 }
 
 .bio__text {
