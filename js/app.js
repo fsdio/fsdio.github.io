@@ -126,6 +126,20 @@ function switchLanguage(lang) {
   renderHeader();
   updatePageTexts();
   
+  // Force update language switcher display
+  const trigger = document.querySelector('.lang-switcher__trigger');
+  const currentLangDisplay = document.querySelector('.lang-switcher__current');
+  const options = document.querySelectorAll('.lang-switcher__option');
+  
+  if (currentLangDisplay) {
+    currentLangDisplay.textContent = t(`lang.${lang}`);
+  }
+  
+  if (options.length >= 2) {
+    options[0].classList.toggle('lang-switcher__option--active', lang === 'en');
+    options[1].classList.toggle('lang-switcher__option--active', lang === 'id');
+  }
+  
   const event = new CustomEvent('langchange', { detail: { lang } });
   window.dispatchEvent(event);
 }
