@@ -1489,11 +1489,13 @@ ul {
   padding: var(--space-xl) var(--space-lg);
 }
 
-.section__title {
-  font-size: var(--font-size-xl);
-  line-height: var(--line-height-heading);
-  margin-bottom: var(--space-md);
-  color: var(--color-primary);
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-sm) var(--space-lg);
 }
 
 .bio__text {
