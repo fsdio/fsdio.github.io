@@ -54,16 +54,18 @@ export function renderNav(currentPage = 'home') {
     `<li><a href="${item.href}" class="nav__link ${item.key === currentPage ? 'nav__link--active' : ''}" data-page="${item.key}">${item.label}</a></li>`
   ).join('');
   return `
-    <nav class="nav" aria-label="${t('nav.home')}">
-      <span class="nav__logo">RS</span>
-      <button class="nav__toggle" aria-label="${t('nav.home')}" aria-expanded="false">
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-      </button>
-      <ul class="nav__menu">${links}</ul>
-      ${renderLangSwitcher()}
-    </nav>
+    <div class="page-container">
+      <nav class="nav" aria-label="${t('nav.home')}">
+        <span class="nav__logo">RS</span>
+        <button class="nav__toggle" aria-label="${t('nav.home')}" aria-expanded="false">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+        <ul class="nav__menu">${links}</ul>
+        ${renderLangSwitcher()}
+      </nav>
+    </div>
   `;
 }
 
