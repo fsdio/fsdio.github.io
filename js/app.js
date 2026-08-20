@@ -204,13 +204,7 @@ function init() {
   initBackToTop();
   initSmoothScroll();
   
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
+  document.addEventListener('DOMContentLoaded', init);
 }
-
-init();
 
 export { initLanguage, switchLanguage, getLang, t, detectPage };
