@@ -77,7 +77,7 @@ export function renderLangSwitcher() {
         <span class="lang-switcher__current">${t(`lang.${currentLang}`)}</span>
         <svg class="lang-switcher__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
       </button>
-      <ul class="lang-switcher__menu" role="listbox">
+      <ul class="lang-switcher__menu" role="listbox" hidden>
         <li role="option" data-lang="en" class="${currentLang === 'en' ? 'lang-switcher__option--active' : ''}">${t('lang.en')}</li>
         <li role="option" data-lang="id" class="${currentLang === 'id' ? 'lang-switcher__option--active' : ''}">${t('lang.id')}</li>
       </ul>

@@ -218,6 +218,10 @@ ul {
   z-index: 1000;
 }
 
+.lang-switcher__menu[hidden] {
+  display: none;
+}
+
 .lang-switcher__option {
   display: block;
   width: 100%;
@@ -228,6 +232,7 @@ ul {
   color: var(--color-text);
   cursor: pointer;
   font-size: var(--font-size-sm);
+  pointer-events: auto;
 }
 
 .lang-switcher__option:hover,
