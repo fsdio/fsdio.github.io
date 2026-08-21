@@ -6,12 +6,12 @@ const I18N = {
     tech: { title: "TECHNOLOGY FOCUS" },
     recent: { title: "RECENTLY LEARNED", viewLog: "View Learning Log" },
     featured: { title: "FEATURED PROJECTS", github: "GitHub", detail: "Detail" },
-    roadmap: { title: "ROADMAP", springBoot: "Spring Boot", svelte: "Svelte", status: { completed: "Completed", inProgress: "In Progress", planned: "Planned" } },
-    project: { title: "PROJECTS", technologies: "Technologies", concepts: "Concepts" },
-    learning: { title: "LEARNING LOG" },
+    roadmap: { title: "ROADMAP", subtitle: "My learning journey organized by technology.", springBoot: "Spring Boot", svelte: "Svelte", status: { completed: "Completed", inProgress: "In Progress", planned: "Planned" } },
+    project: { title: "PROJECTS", subtitle: "Real implementations from my learning journey.", technologies: "Technologies", concepts: "Concepts" },
+    learning: { title: "LEARNING LOG", subtitle: "Chronological engineering journal." },
     about: { title: "ABOUT", experience: "Experience / Focus", exploring: "Currently Exploring", philosophy: "I don't want to just know how to use a framework. I want to understand why it works." },
     footer: { copyright: "Rahmat Sunjani" },
-    status: { completed: "✓ Completed", inProgress: "→ In Progress", planned: "○ Planned" },
+    status: { completed: "Completed", inProgress: "In Progress", planned: "Planned" },
     lang: { en: "English", id: "Indonesian" }
   },
   id: {
@@ -21,12 +21,12 @@ const I18N = {
     tech: { title: "FOKUS TEKNOLOGI" },
     recent: { title: "BARU DIPELAJARI", viewLog: "Lihat Catatan Belajar" },
     featured: { title: "PROYEK UNGGULAN", github: "GitHub", detail: "Detail" },
-    roadmap: { title: "ROADMAP", springBoot: "Spring Boot", svelte: "Svelte", status: { completed: "Selesai", inProgress: "Sedang Berlangsung", planned: "Direncanakan" } },
-    project: { title: "PROYEK", technologies: "Teknologi", concepts: "Konsep" },
-    learning: { title: "CATATAN BELAJAR" },
+    roadmap: { title: "ROADMAP", subtitle: "Perjalanan belajar saya yang diorganisir berdasarkan teknologi.", springBoot: "Spring Boot", svelte: "Svelte", status: { completed: "Selesai", inProgress: "Sedang Berlangsung", planned: "Direncanakan" } },
+    project: { title: "PROYEK", subtitle: "Implementasi nyata dari perjalanan belajar saya.", technologies: "Teknologi", concepts: "Konsep" },
+    learning: { title: "CATATAN BELAJAR", subtitle: "Jurnal rekayasa kronologis." },
     about: { title: "TENTANG", experience: "Pengalaman / Fokus", exploring: "Sedang Dieksplorasi", philosophy: "Saya tidak hanya ingin tahu cara menggunakan framework. Saya ingin memahami mengapa ia bekerja." },
     footer: { copyright: "Rahmat Sunjani" },
-    status: { completed: "✓ Selesai", inProgress: "→ Sedang Berlangsung", planned: "○ Direncanakan" },
+    status: { completed: "Selesai", inProgress: "Sedang Berlangsung", planned: "Direncanakan" },
     lang: { en: "English", id: "Indonesia" }
   }
 };
